@@ -232,6 +232,7 @@ class HTMLExporter(TemplateExporter):
             # Try to find the theme with the given name, looking through the labextensions
             _, theme_path = find_lab_theme(name)
 
+
             with open(theme_path / "index.css") as file:
                 data = file.read()
 

@@ -69,9 +69,9 @@ def _get_css_files():
         print("Not running from git, nothing to do")
         return
 
-    for template_name, resources in template_css_urls.items():
-        for url, filename in resources:
-            _get_css_file(template_name, url, filename)
+    # for template_name, resources in template_css_urls.items():
+    #     for url, filename in resources:
+    #         _get_css_file(template_name, url, filename)
 
 
 class CustomHook(BuildHookInterface):
