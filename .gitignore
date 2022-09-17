@@ -1,0 +1,46 @@
+MANIFEST
+build
+dist
+_build
+docs/man/*.gz
+docs/source/api/generated
+docs/source/config/options
+docs/source/interactive/magics-generated.txt
+docs/gh-pages
+nbconvert/resources/style.min.css
+nbconvert/tests/files/*.html
+*.py[co]
+__pycache__
+*.egg-info
+*~
+*.bak
+.ipynb_checkpoints
+.tox
+.DS_Store
+\#*#
+.#*
+.coverage*
+htmlcov
+.cache
+docs/source/*.tpl
+docs/source/*.j2
+docs/source/example.html
+docs/source/mytemplate/*
+docs/source/config_options.rst
+.venv
+
+# Eclipse pollutes the filesystem
+.project
+.pydevproject
+.settings
+
+# VSCode
+*.code-workspace
+.history
+.vscode
+
+# Downloaded theme files
+share/templates/lab/static/index.css
+share/templates/lab/static/theme-dark.css
+share/templates/lab/static/theme-light.css
+share/templates/classic/static/style.css
