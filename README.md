@@ -56,7 +56,7 @@ Install nbconvert for development using:
 
 ```
 git clone git@github.com:ElixirNote/elixirnbc.git
-cd nbconvert
+cd cd elixirnbc
 pip install -e .
 ```
 
