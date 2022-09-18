@@ -32,9 +32,9 @@ filename of the Jupyter notebook.
 
 ### Example: Convert a notebook to HTML
 
-Convert Jupyter notebook file, `mynotebook.ipynb`, to HTML using:
+Convert Jupyter notebook file, `sample.ipynb`, to HTML using:
 
-    $ jupyter nbconvert --to html mynotebook.ipynb
+    $ jupyter nbconvert --to html sample.ipynb
 
 This command creates an HTML output file named `mynotebook.html`.
 
