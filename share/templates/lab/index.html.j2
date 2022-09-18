@@ -10,7 +10,8 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {% set nb_title = nb.metadata.get('title', resources['metadata']['name']) | escape_html_keep_quotes %}
-<title>{{nb_title}}</title>
+<title>{{nb_title}} - ElixirNote</title>
+<link rel="icon" type="image/x-icon" href="data:image/vnd.microsoft.icon;base64,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">
 
 {%- block html_head_js -%}
 {%- block html_head_js_requirejs -%}
@@ -46,6 +47,10 @@
 /* Force rendering true colors when outputing to pdf */
 * {
   -webkit-print-color-adjust: exact;
+}
+
+body {
+    margin: 0;
 }
 
 /* Misc */
@@ -137,6 +142,52 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     break-inside: avoid-page;
   }
 }
+.app-nav {
+    height: 56px;
+    border-bottom: 1px solid #bdbdbd;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+    position: fixed;
+    background: #fff;
+}
+.app-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.app-button {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    margin-left: 8px;
+    margin-right: 8px;
+    width: 80px;
+    height: 28px;
+    text-align: center;
+    background-color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+}
+.filename {
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 8px;
+    margin-right: 8px;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.logo-area {
+    display: flex;
+    width: 61px;
+    justify-content: center;
+}
+.logo-area svg {
+    width: 32px;
+    padding: 2px;
+}
+
 </style>
 
 {% endblock notebook_css %}
@@ -153,10 +204,35 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 {%- endblock header -%}
 
 {%- block body_header -%}
+<body>
+<div class="app-nav">
+    <div class="logo-area">
+        <svg width="700px" height="700px" viewBox="0 0 700 700" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>elixirnote</title>
+            <g id="elixirnote" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Group" transform="translate(52.000000, 83.000000)" fill="#288ED7">
+                    <path d="M305.938121,0 L0,534 L177.015413,534 C192.132826,531.891968 203.8336,527.45346 212.117734,520.684476 C220.401869,513.915492 232.799019,498.663535 249.309184,474.928605 L408,199.92875 L305.938121,0 Z" id="Path-5"></path>
+                    <path d="M445.647656,267 L357.401504,422.576133 C353.215336,433.653222 350.579322,441.426691 349.493463,445.89654 C347.44385,454.333605 346.307448,460.800872 346.084259,465.298343 C345.197846,483.160428 351.493765,495.96864 356.109958,503.932911 C363.855101,517.295528 385.48425,527.317891 420.997405,534 L597,534 L445.647656,267 Z" id="Path-6"></path>
+                </g>
+            </g>
+        </svg>
+    </div>
+    <div>
+        <p class="filename">Sample_xyz.ipynb</p>
+    </div>
+    <div>
+        <button class="app-button">View Logic</button>
+    </div>
+    <div class="app-buttons">
+        <button class="app-button">Print</button>
+        <button class="app-button">Download</button>
+    </div>
+</div>
+
 {% if resources.theme == 'dark' %}
-<body class="jp-Notebook" data-jp-theme-light="false" data-jp-theme-name="JupyterLab Dark">
+<div class="jp-Notebook" data-jp-theme-light="false" data-jp-theme-name="JupyterLab Dark">
 {% else %}
-<body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
+<div class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 {% endif %}
 {%- endblock body_header -%}
 

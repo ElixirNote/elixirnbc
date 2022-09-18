@@ -78,4 +78,4 @@ class CustomHook(BuildHookInterface):
     def initialize(self, version, build_data):
         if self.target_name not in ["wheel", "sdist"]:
             return
-        _get_css_files()
+        # _get_css_files()

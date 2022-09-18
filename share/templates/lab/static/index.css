@@ -3538,6 +3538,10 @@ button.jp-Dialog-close-button {
   margin: 0;
   padding: 0;
 }
+.highlight {
+  background: #fff;
+  padding: 12px 2px;
+}
 
 .jp-RenderedText pre a:link {
   text-decoration: none;
@@ -4555,15 +4559,18 @@ body.lm-mod-override-cursor * {
   line-height: var(--jp-code-line-height);
   font-size: var(--jp-code-font-size);
   font-family: var(--jp-code-font-family);
-  border: 0;
-  border-radius: 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
   height: auto;
+  padding: 12px 2px;
+  background: #fff;
 
   /* Changed to auto to autogrow */
 }
 
 .cm-editor pre {
   padding: 0 var(--jp-code-padding);
+
 }
 
 .jp-CodeMirrorEditor[data-type='inline'] .cm-dialog {
@@ -5208,13 +5215,14 @@ body.lm-mod-override-cursor * {
 | OutputArea has a list of Outputs
 |----------------------------------------------------------------------------*/
 
-.jp-OutputArea {
+.jp-OutputArea .jp-OutputArea-child {
   overflow-y: auto;
+  display: flex;
 }
 
 .jp-OutputArea-child {
-  display: table;
-  table-layout: fixed;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   overflow: hidden;
 }
@@ -5228,12 +5236,12 @@ body.lm-mod-override-cursor * {
   padding: var(--jp-code-padding);
   letter-spacing: var(--jp-cell-prompt-letter-spacing);
   line-height: var(--jp-code-line-height);
-  font-size: var(--jp-code-font-size);
+  font-size: 11px;
   border: var(--jp-border-width) solid transparent;
   opacity: var(--jp-cell-prompt-opacity);
 
   /* Right align prompt text, don't wrap to handle large prompt numbers */
-  text-align: right;
+  text-align: left;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -5648,8 +5656,6 @@ Note: input and output wrappers have "display: block" propery in print mode.
 
 /* All input areas */
 .jp-InputArea {
-  display: table;
-  table-layout: fixed;
   width: 100%;
   overflow: hidden;
 }
@@ -5676,7 +5682,7 @@ Note: input and output wrappers have "display: block" propery in print mode.
   letter-spacing: var(--jp-cell-prompt-letter-spacing);
   opacity: var(--jp-cell-prompt-opacity);
   line-height: var(--jp-code-line-height);
-  font-size: var(--jp-code-font-size);
+  font-size: 11px;
   border: var(--jp-border-width) solid transparent;
 
   /* Right align prompt text, don't wrap to handle large prompt numbers */
@@ -5863,10 +5869,14 @@ Note: input and output wrappers have "display: block" propery in print mode.
 
 .jp-MarkdownOutput {
   /*display: table-cell;*/
-  width: calc(100% - 64px);
+  /*width: 100%;*/
   margin-top: 0;
   margin-bottom: 0;
-  padding: 0 16px;
+  padding: 10px 6px;
+  border-width: var(--jp-border-width);
+  border-color: #8e24aa4d;
+  border-style: solid;
+  border-radius: 2px;
 }
 
 .jp-MarkdownOutput.jp-RenderedHTMLCommon {
@@ -6188,7 +6198,7 @@ cell outputs.
 }
 
 .jp-Notebook {
-  padding: 10px 100px 10px 10px;
+  padding: 100px 20%;
   outline: none;
   overflow: auto;
   background: var(--jp-layout-color0);
