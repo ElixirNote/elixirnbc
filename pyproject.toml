@@ -3,10 +3,10 @@ requires = ["hatchling >=0.25"]
 build-backend = "hatchling.build"
 
 [project]
-name = "nbconvert"
-authors = [{name = "Jupyter Development Team", email = "jupyter@googlegroups.com"}]
+name = "elixir-nbc"
+authors = [{name = "ciusji", email = "bqjimaster@gmail.com"}]
 license = {file = "LICENSE"}
-description = "Converting Jupyter Notebooks"
+description = "Converting Elixir Notebooks"
 readme = "README.md"
 keywords = ["Interactive", "Interpreter", "Shell", "Web"]
 classifiers = [
@@ -17,7 +17,7 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
 ]
-urls = {Homepage = "https://jupyter.org"}
+urls = {Homepage = "https://ciusji.gitbook.io/elixirnote/guides/elixirnote-nbc"}
 requires-python = ">=3.7"
 dependencies = [
     "beautifulsoup4",
@@ -92,8 +92,8 @@ all = [
 ]
 
 [project.scripts]
-jupyter-nbconvert = "nbconvert.nbconvertapp:main"
-jupyter-dejavu = "nbconvert.nbconvertapp:dejavu_main"
+elixir-nbconvert = "nbconvert.nbconvertapp:main"
+elixir-dejavu = "nbconvert.nbconvertapp:dejavu_main"
 
 [tool.hatch.version]
 path = "nbconvert/_version.py"

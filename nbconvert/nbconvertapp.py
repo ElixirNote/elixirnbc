@@ -195,7 +195,7 @@ class NbConvertApp(JupyterApp):
     """Application used to convert from notebook file type (``*.ipynb``)"""
 
     version = __version__
-    name = "jupyter-nbconvert"
+    name = "elixir-nbconvert"
     aliases = nbconvert_aliases
     flags = nbconvert_flags
 
@@ -248,41 +248,41 @@ class NbConvertApp(JupyterApp):
         """
         The simplest way to use nbconvert is
 
-        > jupyter nbconvert mynotebook.ipynb --to html
+        > elixir-nbconvert mynotebook.ipynb --to html
 
         Options include {formats}.
 
-        > jupyter nbconvert --to latex mynotebook.ipynb
+        > elixir-nbconvert --to latex mynotebook.ipynb
 
         Both HTML and LaTeX support multiple output templates. LaTeX includes
         'base', 'article' and 'report'.  HTML includes 'basic', 'lab' and
         'classic'. You can specify the flavor of the format used.
 
-        > jupyter nbconvert --to html --template lab mynotebook.ipynb
+        > elixir-nbconvert --to html --template lab mynotebook.ipynb
 
         You can also pipe the output to stdout, rather than a file
 
-        > jupyter nbconvert mynotebook.ipynb --stdout
+        > elixir-nbconvert mynotebook.ipynb --stdout
 
         PDF is generated via latex
 
-        > jupyter nbconvert mynotebook.ipynb --to pdf
+        > elixir-nbconvert mynotebook.ipynb --to pdf
 
         You can get (and serve) a Reveal.js-powered slideshow
 
-        > jupyter nbconvert myslides.ipynb --to slides --post serve
+        > elixir-nbconvert myslides.ipynb --to slides --post serve
 
         Multiple notebooks can be given at the command line in a couple of
         different ways:
 
-        > jupyter nbconvert notebook*.ipynb
-        > jupyter nbconvert notebook1.ipynb notebook2.ipynb
+        > elixir-nbconvert notebook*.ipynb
+        > elixir-nbconvert notebook1.ipynb notebook2.ipynb
 
         or you can specify the notebooks list in a config file, containing::
 
             c.NbConvertApp.notebooks = ["my_notebook.ipynb"]
 
-        > jupyter nbconvert --config mycfg.py
+        > elixir-nbconvert --config mycfg.py
         """.format(
             formats=get_export_names()
         )

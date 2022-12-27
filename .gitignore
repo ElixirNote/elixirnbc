@@ -28,6 +28,7 @@ docs/source/example.html
 docs/source/mytemplate/*
 docs/source/config_options.rst
 .venv
+.idea
 
 # Eclipse pollutes the filesystem
 .project
@@ -38,3 +39,7 @@ docs/source/config_options.rst
 *.code-workspace
 .history
 .vscode
+
+## Example
+sample.html
+sample.ipynb
